@@ -1,10 +1,9 @@
-// Функція для оновлення кошика
 function renderCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   const cartContainer = document.getElementById('cart-items');
   const totalPriceElement = document.getElementById('total-price');
 
-  cartContainer.innerHTML = ''; // Очищення перед оновленням
+  cartContainer.innerHTML = '';
 
   if (cartItems.length === 0) {
     cartContainer.innerHTML = '<p>Кошик порожній.</p>';
@@ -31,22 +30,38 @@ function renderCart() {
     total += item.price;
   });
 
-  totalPriceElement.textContent = Загальна сума: ${total} грн;
+  totalPriceElement.textContent = `Загальна сума: ${total} грн`;
 }
 
-// Видалення товару
 function removeItem(index) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart.splice(index, 1);
-  localStorage.setItem('cart', JSON.stringify(cart));
+  const items = JSON.parse(localStorage.getItem('cart')) || [];
+  items.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(items));
   renderCart();
 }
 
-// Очищення кошика повністю
 function clearCart() {
   localStorage.removeItem('cart');
   renderCart();
 }
 
-// Ініціалізація при завантаженні сторінки
+// 🛍️ Функція купівлі
+function buyItems() {
+  const items = JSON.parse(localStorage.getItem('cart')) || [];
+
+  if (items.length === 0) {
+    alert("Ваш кошик порожній.");
+    return;
+  }
+
+  // Можна тут зробити відправку даних на сервер, якщо буде бекенд
+  alert("Дякуємо за покупку! Ваше замовлення оформлено.");
+
+  // Очищення кошика
+  clearCart();
+
+  // Можна перекинути на головну
+  // window.location.href = "index.html";
+}
+
 window.addEventListener('DOMContentLoaded', renderCart);
