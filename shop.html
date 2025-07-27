@@ -2,56 +2,37 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impress Shop</title>
-  <link rel="stylesheet" href="shop.css">
+  <title>Shop</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="shop-container">
+    <header>
+      <h1>SHOP</h1>
+      <a href="cart.html" class="cart-link">🛒 Кошик (<span id="cart-count">0</span>)</a>
+    </header>
 
-  <div class="container">
-    <div class="left-section">
-      <h1>NEW COLLECTION</h1>
-      <div class="subtitle">buy right now</div>
-
-      <div class="categories">
-        <div class="category">
-          <img src="tshirt-icon.png" alt="Футболка">
-          <p>футболка</p>
-        </div>
-        <div class="category">
-          <img src="jeans-icon.png" alt="Джинси">
-          <p>джинси</p>
-        </div>
-        <div class="category">
-          <img src="jewelry-icon.png" alt="Прикраси">
-          <p>прикраси</p>
-        </div>
-        <div class="category">
-          <img src="dress-icon.png" alt="Сукня">
-          <p>сукня</p>
-        </div>
-        <div class="category">
-          <img src="shorts-icon.png" alt="Шорти">
-          <p>шорти</p>
-        </div>
-        <div class="category">
-          <img src="skirt-icon.png" alt="Спідниця">
-          <p>спідниця</p>
-        </div>
+    <div class="palette">
+      <p>Кольорова палітра:</p>
+      <div class="colors">
+        <span onclick="changeColor('white')" style="background:white"></span>
+        <span onclick="changeColor('lightblue')" style="background:lightblue"></span>
+        <span onclick="changeColor('darkblue')" style="background:darkblue"></span>
       </div>
     </div>
 
-    <div class="right-section">
-      <div class="nav-text">Navigation</div>
-      <img class="model-img" src="img/young-woman-posing-2000-s-fashion-style-holding-camera-removebg-preview.png" alt="Model">
+    <div class="category-switch">
+      <p>Категорії:</p>
+      <button onclick="changeCategory('tshirt')">Футболки</button>
+      <button onclick="changeCategory('dress')">Сукні</button>
+      <button onclick="changeCategory('jeans')">Джинси</button>
+      <button onclick="changeCategory('shorts')">Шорти</button>
+      <button onclick="changeCategory('skirt')">Спідниці</button>
     </div>
+
+    <div id="products" class="product-list"></div>
   </div>
 
-  <div class="footer-icons">
-    <img src="search-icon.png" alt="Search">
-    <img src="globe-icon.png" alt="Globe">
-    <img src="user-icon.png" alt="User">
-  </div>
-
+  <script src="script.js"></script>
 </body>
 </html>

@@ -2,8 +2,32 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impress Shop</title>
+  <title>New Collection</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>NEW <br> COLLECTION</h1>
+      <p>buy right now</p>
+      <div class="category-grid">
+        <div onclick="goToShop('tshirt')"><img src="img/tshirt-icon.png"><p>футболка</p></div>
+        <div onclick="goToShop('jeans')"><img src="img/jeans-icon.png"><p>джинси</p></div>
+        <div onclick="goToShop('accessory')"><img src="img/accessory-icon.png"><p>прикраси</p></div>
+        <div onclick="goToShop('dress')"><img src="img/dress-icon.png"><p>сукня</p></div>
+        <div onclick="goToShop('shorts')"><img src="img/shorts-icon.png"><p>шорти</p></div>
+        <div onclick="goToShop('skirt')"><img src="img/skirt-icon.png"><p>спідниця</p></div>
+      </div>
+    </div>
+    <div class="right">
+      <img src="img/model.jpg" alt="Model">
+    </div>
+  </div>
+
+  <script>
+    function goToShop(category) {
+      window.location.href = 'shop.html?category=' + category;
+    }
+  </script>
+</body>
 </html>
