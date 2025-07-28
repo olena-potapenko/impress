@@ -25,8 +25,8 @@ const allProducts = {
     { name: "Джинси рвані", price: 400, image: "./img/jeans-icon.jpg" },
     { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
   ],
-  shorts: [{ name: "Шорти", price: 150, image: "img/shorts1.jpg" }],
-  skirt: [{ name: "Спідниця", price: 200, image: "img/skirt1.jpg" }]
+  shorts: [{ name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" }],
+  skirt: [{ name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" }]
 };
 
 function getCategoryFromURL() {
