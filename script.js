@@ -1,11 +1,30 @@
 const allProducts = {
   tshirt: [
-    { name: "Футболка синя", price: 100, image: "./img/tshirt-icon.jpg" },
-    { name: "Футболка блакитна", price: 100, image: "img/tshirt2.jpg" },
-    { name: "Футболка", price: 100, image: "img/tshirt2.jpg" },
+    { name: "Футболка синя", price: 150, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка блакитна", price: 100, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка", price: 200, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка біла, без принту", price: 50, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка чорна, з принтом", price: 300, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка рожева з метеликами", price: 120, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка червона", price: 340, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка зелена", price: 100, image: "./img/tshirt-icon.jpg" }
   ],
-  dress: [{ name: "Сукня біла", price: 300, image: "img/dress1.jpg" }],
-  jeans: [{ name: "Джинси", price: 400, image: "img/jeans1.jpg" }],
+  dress: [
+    { name: "Сукня біла", price: 250, image: "./img/dress-icon.jpg" },
+    { name: "Сукня з квітами", price: 500, image: "./img/dress-icon.jpg" },
+    { name: "Сукня пляжна", price: 450, image: "./img/dress-icon.jpg" },
+    { name: "Весільна суня", price: 350, image: "./img/dress-icon.jpg" },
+    { name: "Сукня з вишивкою", price: 420, image: "./img/dress-icon.jpg" },
+    { name: "Сукня рожева", price: 300, image: "./img/dress-icon.jpg" },
+    { name: "Сукня з поясом", price: 280, image: "./img/dress-icon.jpg" },
+    { name: "Сукня червона", price: 500, image: "./img/dress-icon.jpg" },
+    { name: "Сукня чорна", price: 320, image: "./img/dress-icon.jpg" }
+  ],
+  jeans: [
+    { name: "Джинси", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси рвані", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
+  ],
   shorts: [{ name: "Шорти", price: 150, image: "img/shorts1.jpg" }],
   skirt: [{ name: "Спідниця", price: 200, image: "img/skirt1.jpg" }]
 };
