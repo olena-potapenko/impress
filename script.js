@@ -1,7 +1,8 @@
 const allProducts = {
   tshirt: [
-    { name: "Футболка синя", price: 100, image: "img/tshirt1.jpg" },
-    { name: "Футболка блакитна", price: 100, image: "img/tshirt2.jpg" }
+    { name: "Футболка синя", price: 100, image: "./img/tshirt-icon.jpg" },
+    { name: "Футболка блакитна", price: 100, image: "img/tshirt2.jpg" },
+    { name: "Футболка", price: 100, image: "img/tshirt2.jpg" },
   ],
   dress: [{ name: "Сукня біла", price: 300, image: "img/dress1.jpg" }],
   jeans: [{ name: "Джинси", price: 400, image: "img/jeans1.jpg" }],
@@ -13,6 +14,9 @@ function getCategoryFromURL() {
   const params = new URLSearchParams(window.location.search);
   return params.get('category') || 'tshirt';
 }
+function goToIndex() {
+  window.location.href="index.html"
+}
 
 function renderProducts(category) {
   const container = document.getElementById('products');
@@ -22,11 +26,12 @@ function renderProducts(category) {
     const div = document.createElement('div');
     div.className = 'product';
     div.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <p>${product.name}</p>
-      <p><strong>${product.price} грн</strong></p>
-      <button onclick='addToCart(${JSON.stringify(product)})'>Додати в кошик</button>
-    `;
+
+<div onclick='addToCart(${JSON.stringify(product)})' class="card">
+<div class="image"><img src="${product.image}" alt="${product.name}"></div>
+  <span class="title">Cool Chair</span>
+  <span class="price"><strong>${product.price} грн</strong></span>
+</div>`
     container.appendChild(div);
   });
   updateCartCount();
