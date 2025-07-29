@@ -24,9 +24,44 @@ const allProducts = {
     { name: "Джинси", price: 400, image: "./img/jeans-icon.jpg" },
     { name: "Джинси рвані", price: 400, image: "./img/jeans-icon.jpg" },
     { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" },
+    { name: "Джинси чорні", price: 400, image: "./img/jeans-icon.jpg" }
   ],
-  shorts: [{ name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" }],
-  skirt: [{ name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" }]
+  shorts: [
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" },
+    { name: "Шорти", price: 150, image: "./img/shorts-icon.jpg" }
+  ],
+  skirt: [
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+    { name: "Спідниця", price: 200, image: "./img/skirt-icon.jpg" },
+  ],
+  accessory: [
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" },
+    { name: "Намисто", price: 200, image: "./img/accessory-icon.jpg" }
+  ]
 };
 
 function getCategoryFromURL() {
@@ -48,7 +83,7 @@ function renderProducts(category) {
 
 <div onclick='addToCart(${JSON.stringify(product)})' class="card">
 <div class="image"><img src="${product.image}" alt="${product.name}"></div>
-  <span class="title">Cool Chair</span>
+  <span class="title">Clothes</span>
   <span class="price"><strong>${product.price} грн</strong></span>
 </div>`
     container.appendChild(div);
