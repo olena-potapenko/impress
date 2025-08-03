@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+  <div class="shop-container">
+    <header>
+      <h1 class = "logoIndex" onclick="goToIndex()">SHOP</h1>
+      <div class="category-switch">
+      <a href="#" onclick="changeCategory('tshirt')">Футболки</a>
+<a href="#" onclick="changeCategory('dress')">Сукні</a>
+<a href="#" onclick="changeCategory('jeans')">Джинси</a>
+<a href="#" onclick="changeCategory('shorts')">Шорти</a>
+<a href="#" onclick="changeCategory('skirt')">Спідниці</a>
+<a href="#" onclick="changeCategory('accessory')">Прикраси</a>
+    </div>
+      <a href="cart.html" class="cart-link">🛒 Кошик (<span id="cart-count">0</span>)</a>
+    </header>
+
+    <div class="palette">
+      <p>Кольорова палітра:</p>
+      <div class="colors">
+        <span onclick="changeColor('white')" style="background:white"></span>
+        <span onclick="changeColor('lightblue')" style="background:lightblue"></span>
+        <span onclick="changeColor('darkblue')" style="background:rgb(22, 32, 93)"></span>
+      </div>
+    </div>
+
+    <div id="products" class="product-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
