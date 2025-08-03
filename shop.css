@@ -111,3 +111,7 @@ header {
 .category-switch a:hover{
     color: #1c3940;
 }
+
+.logoIndex {
+  cursor: pointer;
+}
